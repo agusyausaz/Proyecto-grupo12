@@ -47,4 +47,3 @@ loadMoreBtn3.onclick = () => {
     }
 }
 
-

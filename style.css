@@ -426,83 +426,28 @@ span{
 /*contacto*/
 
 
-.navbar ul {
-        list-style: none;
-}
-
-.navbar li {
-        display: inline;
-        margin-right: 20px;
-}
-
-.navbar a {
-        text-decoration: none;
-        color: #fff;
-}
-
-.container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-}
-
-.container h1 {
-        margin-bottom: 20px;
-        color: #007bff;
-}
-
-.container p {
-        margin-bottom: 15px;
-}
-
-.container form label {
-        display: block;
-        margin-bottom: 5px;
-        color: #333;
-}
-
-.container form input[type="text"],
-.container form input[type="email"],
-.container form input[type="tel"],
-.container form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-}
-
-.container form button {
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-}
-
-.container form button:hover {
-        background-color: #0056b3;
-}
-
 .contact-info {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        margin-top: 20px;
+        background-color: #0c0c0c;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        
 }
 
 .contact-info h2 {
-        color: #007bff;
+        color: #0c96e6;
         margin-bottom: 10px;
 }
 
 .contact-info p {
         margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #828d99;
 }
 
 .contact-info strong {
-        color: #333;
+        font-weight: bold;
 }
 
 .contact-info a {
@@ -512,5 +457,15 @@ span{
 
 .contact-info a:hover {
         text-decoration: underline;
+}
+.contacto {
+        background-image: url('images/19.jpg');
+        /* Ruta de la imagen de fondo */
+        background-size: cover;
+        /* Ajustar el tamaño de la imagen para cubrir todo el contenedor */
+        background-position: center;
+        /* Centrar la imagen */
+        color: #fff;
+        /* Color del texto */
 }
 
