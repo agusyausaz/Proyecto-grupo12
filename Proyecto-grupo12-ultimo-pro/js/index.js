@@ -59,7 +59,7 @@ const render = (movie) => {
 (async () => {
     try {
         let movies = await consultarApi();
-        console.log(movies);
+       // console.log(movies);
         let divPopular = document.querySelector('#contenedorPelis');
         for (let i = 0; i < movies.length; i++) {
             let html = render(movies[i]);
@@ -86,7 +86,7 @@ async function consultarApiAccion() {
 (async () => {
     try {
         let movies = await consultarApiAccion();
-        console.log(movies);
+       // console.log(movies);
         let divAccion = document.querySelector('#contenedorPelisAccion');
         for (let i = 0; i < movies.length; i++) {
             let html = render(movies[i]);
@@ -114,7 +114,7 @@ async function consultarEstrenos() {
 (async () => {
     try {
         let movies = await consultarEstrenos();
-        console.log(movies);
+        //console.log(movies);
         let divEstrenos = document.querySelector('#contenedorEstrenos');
         for (let i = 0; i < movies.length; i++) {
             let html = render(movies[i]);

@@ -5,11 +5,12 @@ loadMoreBtn1.onclick = () => {
     let boxes = [...document.querySelectorAll(
         '.box-container-1 .box-1'
     )];
+   // console.log(boxes)
     for(var i = currentItem1; i< currentItem1+4; i++) {
         boxes[i].style.display= 'inline-block';
     }
     currentItem1 += 4;
-    if(curretItem1 >= boxes.length) {
+    if(currentItem1 >= boxes.length) {
         loadMoreBtn1.style.display='none'
     }
 }
@@ -19,14 +20,15 @@ let loadMoreBtn2 = document.querySelector('#load-more-2');
 let currentItem2= 4;
 
 loadMoreBtn2.onclick = () => {
-    let boxes = [...document.querySelectorAll(
-        '.box-container-2 .box-2'
-    )];
-    for(var i = currentItem2; i< currentItem2+4; i++) {
+     let boxes = [...document.querySelectorAll(
+        '.box-container-2 .box-1'
+    )]; 
+
+    for(let i = currentItem2; i< currentItem2+4; i++) {
         boxes[i].style.display= 'inline-block';
     }
     currentItem2 += 4;
-    if(curretItem2 >= boxes.length) {
+    if(currentItem2 >= boxes.length) {
         loadMoreBtn2.style.display='none'
     }
 }
@@ -36,13 +38,13 @@ let currentItem3= 4;
 
 loadMoreBtn3.onclick = () => {
     let boxes = [...document.querySelectorAll(
-        '.box-container-3 .box-3'
+        '.box-container-3 .box-1'
     )];
     for(var i = currentItem3; i< currentItem3+4; i++) {
         boxes[i].style.display= 'inline-block';
     }
     currentItem3 += 4;
-    if(curretItem3 >= boxes.length) {
+    if(currentItem3 >= boxes.length) {
         loadMoreBtn3.style.display='none'
     }
 }
@@ -71,7 +73,7 @@ const showMenu = (toggleId, navId) =>{
  }
  
  showMenu('nav-toggle','nav-menu')
- showMenu('nav__toggle','nav__menu')
+ //showMenu('nav__toggle','nav__menu')
 
  
 

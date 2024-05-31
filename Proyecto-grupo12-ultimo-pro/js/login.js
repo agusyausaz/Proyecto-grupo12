@@ -9,13 +9,13 @@ function enabledButton(){
     let password = document.getElementById("password");
     let btnLogin = document.querySelector("#btnLogin");
     if ((email.value==="")||( password.value==="")){
-        btnLogin.className="log-btn";//deshabilito
+        btnLogin.className="log-btn ";//deshabilito
         btnLogin.disabled = true;
-        console.log("deshabilitado");
+       // console.log("deshabilitado");
     }else{// habilito
-        btnLogin.className="log-btn";// le pongo las mismas salvo disabled
+        btnLogin.className="habilitado";// le pongo las mismas salvo disabled
         btnLogin.disabled = false;
-        console.log("habilitado");
+       // console.log("habilitado");
     }
     
 }
@@ -24,7 +24,7 @@ function botonLogin(){
     let password = document.getElementById("password");
     
     if(esValidoEmail(email.value)&&esValidoPassword(password.value)){
-        alert( "enviando datos al servidor")
+       // alert( "enviando datos al servidor")
         if((email.value==="admin@hotmail.com")&&(password.value==="admin1234")){
             alert( "inicio sesion correctamente")
         }else{
