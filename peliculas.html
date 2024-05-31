@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peliculas</title>
-    <link rel="stylesheet" href="style.css">
-    
-
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<title>Peliculas</title>
 </head>
 <body>
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">Cine ARGENTO</h2>
+			<nav>
+				<a href="index.html">Inicio</a>
+			</nav>
+		</div>
+	</header>
 
-    <header class="header"> 
+	<main>
+		<div class="pelicula-principal">
+			<div class="contenedor">
+				<h3 class="titulo">Venom</h3>
+				<p class="descripcion">
+					Marvel nos trae una película dedicada al simbionte más popular de la saga , con la brillante interpretación de Tom Hardy
+				</p>
+				<button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Compra Ahora</button>
+			</div>
+		</div>
 
-        <div class="menu container">
+		<section data-aos="fade-up" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000" class="buscadorPrincipal">
+			<h2 class="tituloSection">¿Qué película estás buscando?</h2>
+			<form class="buscadorPeliculas">
+				<input class="inputBuscador" type="text" placeholder="Buscar..." id="buscar" name="buscar">
+				<input class="botonBuscador" type="submit" value="Buscar">
+			</form>
+		</section>
+		
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Películas en Tendencia</h3>
+				<div class="indicadores"></div>
+			</div>
 
-            <a href="#" class="logo">Cine ARGENTO</a>
-            <input type="checkbox" id="menu" />
-             <label for="menu">
-                <img src="images/menu.png" class="menu-icono" alt="Menu">
-                
-             </label>
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
-             <nav class="navbar">
+				<div class="contenedor-carousel">
+					<div id="carousel" class="carousel">
+						<!-- pelis -->
+					</div>
+				</div>
 
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                   
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+	</main>
+	
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	<script>
+        const apiKey = 'a85813eb6b0acc6ba54c5fecd86b9baf';  
 
-                </ul>
+        async function getPopularMovies() {
+            try {
+                const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES&page=1`);
+                const data = await response.json();
+                displayCarouselMovies(data.results);
+            } catch (error) {
+                console.error('Error fetching the movies:', error);
+            }
+        }
 
+        function displayCarouselMovies(movies) {
+            const carousel = document.getElementById('carousel');
+            carousel.innerHTML = '';  
+            movies.forEach(movie => {
+                const movieElement = document.createElement('div');
+                movieElement.className = 'pelicula';
+                movieElement.innerHTML = `
+                    <a href="#"><img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"></a>
+                `;
+                carousel.appendChild(movieElement);
+            });
+        }
 
-                
-
-
-    
+        getPopularMovies();
+    </script>
 </body>
 </html>
