@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - CineARGENTO</title>
+    <link rel="stylesheet" href="administrador.css">
+</head>
+
+<body>
+    <header class="admin-header">
+        <h1>BIENVENIDO al Panel de Administración</h1>
+        <br>
+        <nav class="nav__menu">
+            <ul class="nav__list">
+                <li class="li_links"><a class="nav__link" href="../index.html">Inicio</a></li>
+                <li class="li_links"><a class="nav__link" href="../peliculas.html">Películas</a></li>
+                <li class="li_links"><a class="nav__link" href="../nosotros.html">Nosotros</a></li>
+                <li class="li_links"><a class="nav__link" href="../contacto.html">Contacto</a></li>
+                <li class="li_links"><a class="nav__link" href="../login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-content container">
+        <div class="admin-actions">
+            <button id="btn-add">Agregar Película</button>
+            <button id="btn-edit">Editar Película</button>
+            <button id="btn-delete">Eliminar Película</button>
+        </div>
+
+        <!-- Formulario para agregar película -->
+        <section id="form-add" class="admin-section hide">
+            <h2>Agregar Película</h2>
+            <form id="form-add-movie" action="guardar_pelicula.index" method="POST">
+                <label for="titulo-add">Título:</label>
+                <input type="text" id="titulo-add" name="titulo" required>
+
+                <label for="descripcion-add">Descripción:</label>
+                <textarea id="descripcion-add" name="descripcion" rows="4" required></textarea>
+
+                <label for="imagen-add">URL de la imagen:</label>
+                <input type="url" id="imagen-add" name="imagen" required>
+
+                <button type="submit">Guardar Película</button>
+            </form>
+        </section>
+
+        <!-- Formulario para editar película -->
+        <section id="form-edit" class="admin-section hide">
+            <h2>Editar Película</h2>
+            <form id="form-edit-movie" action="actualizar_pelicula.php" method="POST">
+                <label for="titulo-edit">Título:</label>
+                <input type="text" id="titulo-edit" name="titulo" required>
+
+                <label for="descripcion-edit">Descripción:</label>
+                <textarea id="descripcion-edit" name="descripcion" rows="4" required></textarea>
+
+                <label for="imagen-edit">URL de la imagen:</label>
+                <input type="url" id="imagen-edit" name="imagen" required>
+
+                <input type="hidden" id="movie-id-edit" name="movie-id">
+
+                <button type="submit">Actualizar Película</button>
+                <button type="button" id="btn-cancel-edit">Cancelar</button>
+            </form>
+        </section>
+
+        <!-- Formulario para eliminar película -->
+        <section id="form-delete" class="admin-section hide">
+            <h2>Eliminar Película</h2>
+            <form id="form-delete-movie" action="eliminar_pelicula.php" method="POST">
+                <label for="titulo-delete">Título de la Película a Eliminar:</label>
+                <input type="text" id="titulo-delete" name="titulo" required>
+
+                <button type="submit">Eliminar Película</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="admin-footer">
+        <p>&copy; 2024 CineARGENTO - Panel de Administración</p>
+    </footer>
+
+    <script src="js/administrador.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
