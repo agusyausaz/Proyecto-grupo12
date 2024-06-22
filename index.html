@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineARGENTO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Barra de navegación -->
+        <nav class="nav_container">
+            <a href="https://acortar.link/iU3SGN" class="nav__logo" target="_blank">
+                <img class="logo" src="images/CAL.png" alt="Logo de CineARGENTO">
+            </a>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__burger"></i>
+                <i class="ri-close-line nav__close"></i>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="li_links"><a class="nav__link" href="index.html">Inicio</a></li>
+                    <li class="li_links"><a class="nav__link" href="peliculas.html">Películas</a></li>
+                    <li class="li_links"><a class="nav__link" href="nosotros.html">Nosotros</a></li>
+                    <li class="li_links"><a class="nav__link" href="contacto.html">Contacto</a></li>
+                    <li class="li_links"><a class="nav__link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Fin de barra de navegación -->
+
+        <div class="header-content container">
+            <div class="header_3">
+                <h1>Las mejores <br> Películas</h1>
+                <img src="images/2.jpg" alt="Icono de Play">
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Contenedor de películas -->
+        <section class="movies container">
+            <h2>Películas mejores puntuadas</h2>
+            <hr>
+            <div id="contenedorPelis" class="box-container">
+                <!-- Aquí van las películas -->
+            </div>
+            <div class="load-more" id="load-more-1">&#11167</div>
+        </section>
+
+        <section class="movies container">
+            <h2>Películas de acción</h2>
+            <hr>
+            <div id="contenedorPelisAccion" class="box-container">
+                <!-- Aquí van las películas -->
+            </div>
+            <div class="load-more" id="load-more-2">&#11167</div>
+        </section>
+
+        <section class="movies container">
+            <h2>Películas de estreno</h2>
+            <hr>
+            <div id="contenedorEstrenos" class="box-container">
+                <!-- Aquí van las películas -->
+            </div>
+            <div class="load-more" id="load-more-3">&#11167</div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <h3>Cine ARGENTO</h3>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="peliculas.html">Películas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </footer>
+
+    <script src="./js/bd.js"></script>
+    <script src="./js/index.js"></script>
+    
+</body>
+
+</html>
