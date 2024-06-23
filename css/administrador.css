@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/wallpaper-eva-background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #3498db; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    display: block; /* Mostrar como bloque */
+    margin-bottom: 10px; /* Margen inferior para separar los botones */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Incluir padding y border en el ancho */
+}
+
+/* Estilo cuando se pasa el cursor sobre el botón */
+button:hover {
+    background-color: #2980b9; /* Color de fondo azul oscuro */
+}
+
+/* Estilo para el botón deshabilitado */
+button:disabled {
+    background-color: #bdc3c7; /* Color de fondo gris */
+    cursor: not-allowed; /* Cursor no permitido */
+}
+
+/* Estilo para el botón habilitado */
+button:enabled {
+    cursor: pointer; /* Cursor permitido */
+}

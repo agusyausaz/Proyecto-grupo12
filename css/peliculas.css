@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.pelicula-principal {
+    background-color: #000;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.pelicula-principal .contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pelicula-principal .titulo {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.pelicula-principal .descripcion {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.pelicula-principal .boton {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.peliculas-recomendadas {
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.peliculas-recomendadas .contenedor-titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.peliculas-recomendadas h3 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.peliculas-recomendadas .contenedor-carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.pelicula {
+    min-width: 150px;
+    margin-right: 10px;
+}
+
+.pelicula img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.flecha-izquierda, .flecha-derecha {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.contenedor-principal {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for specific categories */
+.peliculas-recomendadas#accion .contenedor-titulo-controles h3 {
+    color: var(--font-semi-bold);
+}
+
+.peliculas-recomendadas#comedia .contenedor-titulo-controles h3 {
+    color: var(--font-regular);
+}
+
+.peliculas-recomendadas#drama .contenedor-titulo-controles h3 {
+    color: var(--font-regular);
+}
+
+.peliculas-recomendadas#terror .contenedor-titulo-controles h3 {
+    color: var(--font-semi-bold);
+}
+
+.peliculas-recomendadas#ciencia-ficcion .contenedor-titulo-controles h3 {
+    color: var(--font-regular);
+}
